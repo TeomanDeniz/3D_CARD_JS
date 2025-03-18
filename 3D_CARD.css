@@ -1,0 +1,148 @@
+/******************************************************************************\
+# CSS - 3D_CARD                                  #       Maximum Tension       #
+################################################################################
+#                                                #      -__            __-     #
+# Teoman Deniz                                   #  :    :!1!-_    _-!1!:    : #
+# maximum-tension.com                            #  ::                      :: #
+#                                                #  :!:    : :: : :  :  ::::!: #
+# +.....................++.....................+ #   :!:: :!:!1:!:!::1:::!!!:  #
+# : C - Maximum Tension :: Create - 2025/03/05 : #   ::!::!!1001010!:!11!!::   #
+# :---------------------::---------------------: #   :!1!!11000000000011!!:    #
+# : License - MIT       :: Update - 2025/03/18 : #    ::::!!!1!!1!!!1!!!::     #
+# +.....................++.....................+ #       ::::!::!:::!::::      #
+\******************************************************************************/
+
+._3D_CARD
+{
+	  WIDTH: 320PX;
+	 HEIGHT: 200PX;
+	DISPLAY: INLINE-BLOCK;
+}
+
+@MEDIA SCREEN AND (MAX-WIDTH: 700PX)
+{
+	.CONTAINER
+	{
+		              TOP: 0;
+		             LEFT: 0;
+		            WIDTH: 100%;
+		         POSITION: RELATIVE;
+
+		-WEBKIT-TRANSFORM: TRANSLATE(0%, 0%);
+		    -MS-TRANSFORM: TRANSLATE(0%, 0%);
+		        TRANSFORM: TRANSLATE(0%, 0%);
+	}
+
+	._3D_CARD
+	{
+		  WIDTH: 320PX;
+		 MARGIN: 15PX AUTO;
+		 HEIGHT: 200PX;
+		DISPLAY: BLOCK;
+	}
+}
+
+._3D_CARD
+{
+	              BORDER-RADIUS: 8PX;
+	-WEBKIT-TAP-HIGHLIGHT-COLOR: #000;
+
+	    -WEBKIT-TRANSFORM-STYLE: PRESERVE-3D;
+	            TRANSFORM-STYLE: PRESERVE-3D;
+}
+
+._3D_CARD IMG
+{
+	   BOX-SHADOW: 0 2PX 8PX RGBA(14, 21, 47, 0.25);
+	BORDER-RADIUS: 8PX;
+}
+
+._3D_CARD_CONTAINER
+{
+	             WIDTH: 100%;
+	            HEIGHT: 100%;
+	          POSITION: RELATIVE;
+	     BORDER-RADIUS: 8PX;
+
+	-WEBKIT-TRANSITION: ALL 0.2S EASE-OUT;
+	     -O-TRANSITION: ALL 0.2S EASE-OUT;
+	        TRANSITION: ALL 0.2S EASE-OUT;
+}
+
+._3D_CARD_CONTAINER.OVER ._3D_CARD_SHADOW
+{
+	-WEBKIT-BOX-SHADOW:
+		0 45PX 100PX RGBA(14, 21, 47, 0.4),
+		0 16PX  40PX RGBA(14, 21, 47, 0.4);
+	        BOX-SHADOW:
+		        0 45PX 100PX RGBA(14, 21, 47, 0.4),
+		        0 16PX  40PX RGBA(14, 21, 47, 0.4);
+}
+
+._3D_CARD_LAYERS
+{
+	                  WIDTH: 100%;
+	                 HEIGHT: 100%;
+	               POSITION: RELATIVE;
+	               OVERFLOW: HIDDEN;
+	          BORDER-RADIUS: 8PX;
+
+	-WEBKIT-TRANSFORM-STYLE: PRESERVE-3D;
+	        TRANSFORM-STYLE: PRESERVE-3D;
+}
+
+._3D_CARD_RENDERED_LAYER
+{
+	                TOP: 0; 
+	               LEFT: 0;
+	              WIDTH: 100%;
+	             HEIGHT: 100%;
+	           POSITION: ABSOLUTE;
+	           OVERFLOW: HIDDEN;
+	      BORDER-RADIUS: 8PX;
+	    BACKGROUND-SIZE: COVER;
+	   BACKGROUND-COLOR: TRANSPARENT;
+	  BACKGROUND-REPEAT: NO-REPEAT;
+	BACKGROUND-POSITION: CENTER;
+
+	 -WEBKIT-TRANSITION: ALL 0.1S EASE-OUT;
+	      -O-TRANSITION: ALL 0.1S EASE-OUT;
+	         TRANSITION: ALL 0.1S EASE-OUT;
+}
+
+._3D_CARD_SHADOW
+{
+	               TOP: 5%; 
+	              LEFT: 5%;
+	             WIDTH: 90%;
+	            HEIGHT: 90%;
+	          POSITION: ABSOLUTE;
+
+	-WEBKIT-TRANSITION: ALL 0.2S EASE-OUT;
+	     -O-TRANSITION: ALL 0.2S EASE-OUT;
+	        TRANSITION: ALL 0.2S EASE-OUT;
+
+	-WEBKIT-BOX-SHADOW: 0 8PX 30PX RGBA(14, 21, 47, 0.6);
+	        BOX-SHADOW: 0 8PX 30PX RGBA(14, 21, 47, 0.6);
+}
+
+._3D_CARD_SHINE
+{
+	          TOP: 0; 
+	         LEFT: 0; 
+	        RIGHT: 0; 
+	       BOTTOM: 0;
+	     POSITION: ABSOLUTE;
+	BORDER-RADIUS: 8PX;
+
+	   BACKGROUND: -O-LINEAR-GRADIENT(
+	   	315DEG,
+	   	RGBA(255, 255, 255, 0.25)  0%,
+	   	RGBA(255, 255, 255, 0.00) 60%
+	   );
+	   BACKGROUND: LINEAR-GRADIENT(
+	   	135DEG,
+	   	RGBA(255, 255, 255, 0.25)  0%,
+	   	RGBA(255, 255, 255, 0.00) 60%
+	   );
+}
