@@ -8,7 +8,7 @@
 # +.....................++.....................+ #   :!:: :!:!1:!:!::1:::!!!:  #
 # : C - Maximum Tension :: Create - 2025/03/05 : #   ::!::!!1001010!:!11!!::   #
 # :---------------------::---------------------: #   :!1!!11000000000011!!:    #
-# : License - MIT       :: Update - 2025/03/18 : #    ::::!!!1!!1!!!1!!!::     #
+# : License - MIT       :: Update - 2025/04/03 : #    ::::!!!1!!1!!!1!!!::     #
 # +.....................++.....................+ #       ::::!::!:::!::::      #
 \******************************************************************************/
 
@@ -53,15 +53,20 @@ function
 			var	IMAGE_SOURCE = LAYER_ELEMENTS[INDEX].getAttribute("DATA-IMG");
 			var	SIZE_ATTRIBUTE =
 				LAYER_ELEMENTS[INDEX].getAttribute("DATA-SIZE");
+			var INNER_HTML = LAYER_ELEMENTS[INDEX].innerHTML;
 
 			if (SIZE_ATTRIBUTE && SIZE_ATTRIBUTE !== "")
 				LAYER.style.backgroundSize = SIZE_ATTRIBUTE;
 
 			LAYER.className = "_3D_CARD_RENDERED_LAYER";
 			LAYER.setAttribute("DATA-LAYER", INDEX);
-			LAYER.style.backgroundImage = "URL(" + IMAGE_SOURCE + ")";
+
+			if (IMAGE_SOURCE)
+				LAYER.style.backgroundImage = "URL(" + IMAGE_SOURCE + ")";
+
 			LAYER_DIV.appendChild(LAYER);
 			LAYERS.push(LAYER);
+			LAYER.innerHTML = INNER_HTML;
 		}
 
 		CONSTAINER_DIV.appendChild(SHADOW_DIV);
